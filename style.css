@@ -46,7 +46,7 @@ nav a:hover {
 section {
   padding: 60px 20px;
   margin: 40px 0;
-  text-align: left;
+  text-align: center;
   transition: transform 0.3s ease;
 }
 
