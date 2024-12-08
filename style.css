@@ -68,54 +68,18 @@ p {
   margin-bottom: 20px;
 }
 
-/* Project Cards */
-#projects div {
-  background: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 300px;
-  display: inline-block;
-  text-align: left;
-}
-
-#projects div:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-#projects a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #3498db;
-  text-decoration: none;
+/* Name and Bitmoji Styling */
+.name {
   font-weight: bold;
-  transition: color 0.3s;
+  color: #333;
 }
 
-#projects a:hover {
-  color: #f39c12;
-}
-
-/* Contact Section */
-#contact p {
-  font-size: 1.2rem;
-  color: #2d3e50;
-  margin: 10px 0;
-}
-
-/* Footer */
-footer {
-  background-color: #2d3e50;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  font-size: 1rem;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+.bitmoji {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  vertical-align: middle;
+  animation: wave 2s ease-in-out infinite;
 }
 
 /* Animations */
@@ -128,20 +92,29 @@ footer {
   }
 }
 
-@keyframes slideUp {
-  from {
-    transform: translateY(20px);
+@keyframes wave {
+  0%, 100% {
+    transform: rotate(0deg);
   }
-  to {
-    transform: translateY(0);
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  75% {
+    transform: rotate(15deg);
   }
 }
 
-section {
-  animation: slideUp 1s ease-out;
-}
-
-/* Smooth Scroll */
-html {
-  scroll-behavior: smooth;
+/* Footer */
+footer {
+  background-color: #2d3e50;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
