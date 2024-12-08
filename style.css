@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #FFC0CB;
+  background-color: #50C878;
   color: #333;
   line-height: 1.6;
   font-size: 16px;
@@ -71,7 +71,7 @@ p {
 /* Name and Bitmoji Styling */
 .name {
   font-weight: bold;
-  color: #FFC0CB;
+  color: #333;
 }
 
 .bitmoji {
