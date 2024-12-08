@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header Section -->
   <header>
     <h1>Welcome to My Portfolio</h1>
     <nav>
@@ -16,65 +17,66 @@
     </nav>
   </header>
 
+  <!-- About Section -->
   <section id="about">
-    <h1>About Me</h1>
-    <h2><img src="20088502.png" class="bitmoji" ALIGN="right"/> Hello! I am Parnikaa :) </h2> 
+    <div class="section-container">
+      <img src="20088502.png" alt="Bitmoji" class="bitmoji">
+      <div class="text-content">
+        <h2>About Me</h2>
+        <p>Hello! I am <span class="name">Parnikaa</span>. Welcome to my portfolio! I specialize in creating dynamic, modern, and functional designs.</p>
+      </div>
+    </div>
   </section>
 
+  <!-- Projects Section -->
   <section id="projects">
     <h2>My Projects</h2>
-    <div>
-      <h3>Project 1</h3>
-      <p>A description of your project. <a href="#">View Project</a></p>
-    </div>
-    <div>
-      <h3>Project 2</h3>
-      <p>A description of another project. <a href="#">View Project</a></p>
+    <div class="project-container">
+      <div class="project">
+        <h3>Project 1</h3>
+        <p>A description of your project. <a href="#">View Project</a></p>
+      </div>
+      <div class="project">
+        <h3>Project 2</h3>
+        <p>A description of another project. <a href="#">View Project</a></p>
+      </div>
     </div>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: parnikaauppal@gmail.com</p>
-    <p>LinkedIn: <a href="www.linkedin.com/in/parnikaa">Link to my profile</a></p>
+    <p>Email: <a href="mailto:parnikaauppal@gmail.com">parnikaauppal@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/parnikaa" target="_blank">Visit my LinkedIn</a></p>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2024 <a href="https://github.com/parnikaauppal/portfolio">My Code</a></p>
+    <p>&copy; 2024 <a href="https://github.com/parnikaauppal/portfolio" target="_blank">My Code</a></p>
   </footer>
 
+  <!-- Scroll Animations Script -->
   <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('section');
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('section');
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-          }
-        });
-      },
-      {
-        threshold: 0.1,
-      }
-    );
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
 
-    sections.forEach((section) => {
-      observer.observe(section);
+      sections.forEach((section) => {
+        observer.observe(section);
+      });
     });
-  });
-</script>
-
-<section id="about">
-  <div class="section-container">
-    <img src="your-image.jpg" alt="About Me">
-    <div class="text-content">
-      <h2>About Me</h2>
-      <p>Hello! I am [Your Name]. Welcome to my portfolio. I specialize in creating dynamic, modern, and functional designs.</p>
-    </div>
-  </div>
-</section>
-
+  </script>
 </body>
 </html>
