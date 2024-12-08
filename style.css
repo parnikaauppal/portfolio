@@ -26,7 +26,7 @@ header {
 }
 
 header h1 {
-  font-size: 3rem;
+  font-size: 5rem;
   margin-bottom: 10px;
 }
 
@@ -71,15 +71,14 @@ p {
 /* Name and Bitmoji Styling */
 .name {
   font-weight: bold;
-  color: #333;
+  color: #FFC0CB;
 }
 
 .bitmoji {
-  width: 40px;
-  height: 40px;
+  width: 90px;
+  height: 90px;
   margin-left: 10px;
   vertical-align: middle;
-  animation: wave 2s ease-in-out infinite;
 }
 
 /* Animations */
