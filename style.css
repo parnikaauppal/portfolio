@@ -71,12 +71,12 @@ p {
 /* Name and Bitmoji Styling */
 .name {
   font-weight: bold;
-  color: #333;
+  color: #154360;
 }
 
 .bitmoji {
-  width: 200px;
-  height: 200px;
+  width: 500px;
+  height: 500px;
   margin-left: 50px;
   vertical-align: right;
 }
