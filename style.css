@@ -75,9 +75,9 @@ p {
 }
 
 .bitmoji {
-  width: 200px;
-  height: 200px;
-  margin-left: -2px;
+  width: 400px;
+  height: 400px;
+  margin-left: -10px;
   vertical-align: left;
   float: left;
 }
