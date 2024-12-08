@@ -6,152 +6,130 @@
 }
 
 body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   background-color: #000;
   color: #fff;
-  line-height: 1.6;
-  font-size: 16px;
-  overflow-x: hidden;
-}
-
-/* Header Section */
-header {
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-  padding: 50px 20px;
-}
-
-header h1 {
-  font-size: 4rem;
-  margin-bottom: 20px;
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-nav {
-  margin-top: 20px;
-}
-
-nav a {
-  color: #fff;
-  margin: 0 15px;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
+  height: 100vh;
+  overflow: hidden;
   position: relative;
-}
-
-nav a::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background: #fff;
-  transition: width 0.3s ease;
-}
-
-nav a:hover::after {
-  width: 100%;
-}
-
-nav a:hover {
-  color: #aaa;
-}
-
-/* About Section */
-.section-container {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 100px 20px;
 }
 
-.bitmoji {
-  width: 200px;
-  height: auto;
-  margin-right: 20px;
+/* Bitmoji Greeting Icon */
+#bitmoji {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+#bitmoji img {
+  width: 100%;
   border-radius: 50%;
   border: 2px solid #fff;
 }
 
-.text-content {
-  max-width: 500px;
-  text-align: left;
+#bitmoji:hover {
+  transform: scale(1.1);
 }
 
-.text-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-
-.text-content p {
-  font-size: 1rem;
-  color: #ccc;
-  line-height: 1.8;
-}
-
-/* Projects Section */
-.project-container {
+/* Navigation Icons */
+.top-nav {
+  position: absolute;
+  top: 10px;
+  right: 10px;
   display: flex;
-  justify-content: space-around;
-  gap: 20px;
-  flex-wrap: wrap;
-  padding: 100px 20px;
+  gap: 15px;
 }
 
-.project {
-  background: #111;
-  padding: 20px;
-  border: 1px solid #333;
-  border-radius: 8px;
-  width: 45%;
+.top-nav a {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
 }
 
-.project h3 {
-  margin-bottom: 10px;
+.top-nav a img {
+  width: 100%;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  transition: transform 0.3s, opacity 0.3s;
 }
 
-.project p {
-  color: #aaa;
+.top-nav a:hover img {
+  transform: scale(1.2);
+  opacity: 0.8;
 }
 
-/* Contact Section */
-#contact {
-  text-align: center;
-  padding: 100px 20px;
-}
-
-#contact a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-#contact a:hover {
-  color: #aaa;
-}
-
-/* Footer */
-footer {
-  background-color: #111;
-  color: #fff;
-  text-align: center;
-  padding: 30px 20px;
-  font-size: 0.9rem;
+/* Main Content */
+main {
+  z-index: 2;
   position: relative;
 }
 
-/* Scroll Animations */
-section {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
+#intro h1 {
+  font-size: 3rem;
+  text-align: center;
+  line-height: 1.5;
+  color: #fff;
 }
 
-section.in-view {
-  opacity: 1;
-  transform: translateY(0);
+#intro .highlight {
+  color: #3498db; /* Blue for "Parnikaa" */
+}
+
+/* Background Numbers Overlay */
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  opacity: 0.5;
+}
+
+.background-overlay .numbers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  font-size: 4rem;
+  color: #fff;
+  opacity: 0.5;
+}
+
+.background-overlay .numbers span {
+  font-weight: bold;
+  opacity: 0.2; /* Lighter to blend into the background */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  #bitmoji {
+    width: 50px;
+    height: 50px;
+  }
+
+  .top-nav a {
+    width: 30px;
+    height: 30px;
+  }
+
+  #intro h1 {
+    font-size: 2rem;
+  }
+
+  .background-overlay .numbers span {
+    font-size: 2.5rem;
+  }
 }
