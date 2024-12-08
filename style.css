@@ -11,18 +11,15 @@ body {
   color: #fff;
   line-height: 1.6;
   font-size: 16px;
-  margin: 0;
-  padding: 0;
   overflow-x: hidden;
 }
 
-/* Header */
+/* Header Section */
 header {
   background-color: #000;
   color: #fff;
   text-align: center;
   padding: 50px 20px;
-  animation: fadeIn 1s ease-out;
 }
 
 header h1 {
@@ -63,63 +60,78 @@ nav a:hover {
   color: #aaa;
 }
 
-/* Section Styles */
-section {
-  padding: 100px 20px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-h2 {
-  font-size: 3rem;
-  font-weight: 400;
-  margin-bottom: 30px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  position: relative;
-  color: #fff;
-}
-
-p {
-  font-size: 1rem;
-  line-height: 1.8;
-  margin-bottom: 20px;
-  color: #ccc;
-}
-
-/* Asymmetrical Layout */
+/* About Section */
 .section-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 100px 20px;
 }
 
-.section-container img {
-  width: 45%;
-  max-width: 400px;
-  object-fit: cover;
-  margin: 10px;
-  border: 3px solid #fff;
+.bitmoji {
+  width: 200px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 50%;
+  border: 2px solid #fff;
 }
 
-.section-container .text-content {
-  width: 45%;
-  max-width: 400px;
+.text-content {
+  max-width: 500px;
   text-align: left;
 }
 
-/* Scroll Animations */
-section {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
+.text-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
-section.in-view {
-  opacity: 1;
-  transform: translateY(0);
+.text-content p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.8;
+}
+
+/* Projects Section */
+.project-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 100px 20px;
+}
+
+.project {
+  background: #111;
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  width: 45%;
+}
+
+.project h3 {
+  margin-bottom: 10px;
+}
+
+.project p {
+  color: #aaa;
+}
+
+/* Contact Section */
+#contact {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+#contact a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+#contact a:hover {
+  color: #aaa;
 }
 
 /* Footer */
@@ -132,22 +144,14 @@ footer {
   position: relative;
 }
 
-/* Minimalist Design Enhancements */
-hr {
-  border: none;
-  height: 2px;
-  background: #444;
-  margin: 40px 0;
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
+/* Scroll Animations */
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
-a {
-  color: #fff;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #888;
+section.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
