@@ -8,9 +8,4 @@ This is my personal portfolio website hosted on GitHub Pages.
 - **Contact**: Links to get in touch.
 
 ## Live Website
-Visit: [https://yourusername.github.io/portfolio](https://yourusername.github.io/portfolio)
-
-## How to Use
-1. Clone the repository.
-2. Make edits as needed.
-3. Push updates to see changes live.
+Visit: [https://parnikaauppal.github.io/portfolio/](https://parnikaauppal.github.io/portfolio/)
