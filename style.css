@@ -75,10 +75,10 @@ p {
 }
 
 .bitmoji {
-  width: 90px;
-  height: 90px;
-  margin-left: 10px;
-  vertical-align: middle;
+  width: 200px;
+  height: 200px;
+  margin-left: 50px;
+  vertical-align: right;
 }
 
 /* Animations */
