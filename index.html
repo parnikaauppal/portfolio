@@ -3,80 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>Parnikaa's Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header Section -->
-  <header>
-    <h1>Welcome to My Portfolio</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <!-- Bitmoji Greeting Icon -->
+  <a href="#" id="bitmoji" title="Go to Home">
+    <img src="20088502.png" alt="Bitmoji Greeting">
+  </a>
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="section-container">
-      <img src="20088502.png" alt="Bitmoji" class="bitmoji">
-      <div class="text-content">
-        <h2>About Me</h2>
-        <p>Hello! I am <span class="name">Parnikaa</span>. Welcome to my portfolio! I specialize in creating dynamic, modern, and functional designs.</p>
-      </div>
+  <!-- Navigation Icons -->
+  <nav class="top-nav">
+    <a href="#about" title="About">
+      <img src="about-icon.png" alt="About">
+    </a>
+    <a href="#projects" title="Projects">
+      <img src="projects-icon.png" alt="Projects">
+    </a>
+    <a href="#contact" title="Contact">
+      <img src="contact-icon.png" alt="Contact">
+    </a>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <div id="intro">
+      <h1>
+        Hello! I am <span class="highlight">Parnikaa</span> :)
+      </h1>
     </div>
-  </section>
+  </main>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>My Projects</h2>
-    <div class="project-container">
-      <div class="project">
-        <h3>Project 1</h3>
-        <p>A description of your project. <a href="#">View Project</a></p>
-      </div>
-      <div class="project">
-        <h3>Project 2</h3>
-        <p>A description of another project. <a href="#">View Project</a></p>
-      </div>
+  <!-- Background Overlay -->
+  <div class="background-overlay">
+    <div class="numbers">
+      <!-- Numbers for background -->
+      <span>01234</span>
+      <span>56789</span>
+      <span>09876</span>
+      <span>54321</span>
+      <span>12345</span>
     </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:parnikaauppal@gmail.com">parnikaauppal@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/parnikaa" target="_blank">Visit my LinkedIn</a></p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 <a href="https://github.com/parnikaauppal/portfolio" target="_blank">My Code</a></p>
-  </footer>
-
-  <!-- Scroll Animations Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const sections = document.querySelectorAll('section');
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('in-view');
-            }
-          });
-        },
-        {
-          threshold: 0.1,
-        }
-      );
-
-      sections.forEach((section) => {
-        observer.observe(section);
-      });
-    });
-  </script>
+  </div>
 </body>
 </html>
