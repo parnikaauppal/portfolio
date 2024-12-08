@@ -80,6 +80,7 @@ p {
   margin-left: 10px;
   vertical-align: left;
   text-align: center;
+  float: left;
 }
 
 /* Animations */
