@@ -42,5 +42,39 @@
   <footer>
     <p>&copy; 2024 <a href="https://github.com/parnikaauppal/portfolio">My Code</a></p>
   </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+  });
+</script>
+
+<section id="about">
+  <div class="section-container">
+    <img src="your-image.jpg" alt="About Me">
+    <div class="text-content">
+      <h2>About Me</h2>
+      <p>Hello! I am [Your Name]. Welcome to my portfolio. I specialize in creating dynamic, modern, and functional designs.</p>
+    </div>
+  </div>
+</section>
+
 </body>
 </html>
