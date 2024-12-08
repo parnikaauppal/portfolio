@@ -46,7 +46,7 @@ nav a:hover {
 section {
   padding: 60px 20px;
   margin: 40px 0;
-  text-align: center;
+  text-align: left;
   transition: transform 0.3s ease;
 }
 
@@ -77,8 +77,8 @@ p {
 .bitmoji {
   width: 500px;
   height: 500px;
-  margin-right: 50px;
-  vertical-align: right;
+  margin-left: 10px;
+  vertical-align: left;
 }
 
 /* Animations */
