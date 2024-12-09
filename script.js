@@ -1,13 +1,11 @@
-// Fade-in effect for sections as they appear in the viewport
-const sections = document.querySelectorAll('section');
-const options = { threshold: 0.1 };
-
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+// Smooth scroll for navigation links
+document.querySelectorAll('.navbar a').forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        const targetId = e.target.getAttribute('href').slice(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
         }
     });
-}, options);
-
-sections.forEach(section => observer.observe(section));
+});
