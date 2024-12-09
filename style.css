@@ -1,33 +1,91 @@
+:root {
+    --main-bg-color: #f7f7f7;
+    --accent-color: #333;
+    --text-color: #555;
+    --font-family: 'Arial', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+    font-family: var(--font-family);
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
 header {
-  background: #333;
-  color: #fff;
-  padding: 10px 20px;
-  text-align: center;
+    background: var(--accent-color);
+    color: white;
+    padding: 1rem 2rem;
 }
 
-header nav a {
-  color: #fff;
-  margin: 0 15px;
-  text-decoration: none;
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-section {
-  padding: 20px;
-  margin: 20px;
-  text-align: center;
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+header ul li a:hover {
+    opacity: 0.7;
+}
+
+#hero {
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#hero span {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+#about, #work, #contact {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#work .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
 }
 
 footer {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
-  margin-top: 20px;
+    text-align: center;
+    padding: 1rem;
+    background: var(--accent-color);
+    color: white;
 }
