@@ -1,8 +1,10 @@
+/* Global Variables */
 :root {
     --main-bg-color: #f7f7f7;
-    --accent-color: #333;
+    --accent-color: #1a1a1a;
     --text-color: #555;
-    --font-family: 'Arial', sans-serif;
+    --font-family: 'Inter', sans-serif;
+    --transition-speed: 0.3s;
 }
 
 * {
@@ -13,79 +15,98 @@
 
 body {
     font-family: var(--font-family);
-    background-color: var(--main-bg-color);
     color: var(--text-color);
+    background-color: var(--main-bg-color);
     line-height: 1.6;
 }
 
+/* Header */
 header {
-    background: var(--accent-color);
-    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem 2rem;
 }
 
-header .logo {
+nav .logo {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 600;
 }
 
-header ul {
-    list-style: none;
+nav ul {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
-header ul li a {
-    color: white;
+nav ul li a {
+    color: var(--accent-color);
     text-decoration: none;
-    transition: opacity 0.3s;
+    font-weight: 500;
+    position: relative;
+    transition: color var(--transition-speed);
 }
 
-header ul li a:hover {
-    opacity: 0.7;
+nav ul li a:hover {
+    color: #0073e6;
 }
 
 #hero {
-    padding: 5rem 2rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    background: linear-gradient(120deg, #e0e0e0, #f7f7f7);
 }
 
 #hero h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    color: var(--accent-color);
     margin-bottom: 1rem;
 }
 
 #hero span {
-    color: var(--accent-color);
-    font-weight: bold;
+    color: #0073e6;
 }
 
 #about, #work, #contact {
-    padding: 4rem 2rem;
+    padding: 5rem 2rem;
     text-align: center;
 }
 
 #work .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .card {
     background: white;
-    padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 .card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 footer {
-    text-align: center;
-    padding: 1rem;
     background: var(--accent-color);
     color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 0.9rem;
 }
