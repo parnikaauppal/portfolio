@@ -16,7 +16,7 @@ body {
   align-items: center;
   background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png'); /* Grainy texture */
   background-size: cover;
-  opacity: 0.8; /* Faded grainy texture */
+  opacity: 0.5; /* Faded grainy texture */
 }
 
 /* Header Navigation */
