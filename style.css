@@ -16,7 +16,7 @@ body {
   align-items: center;
   background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png'); /* Grainy texture */
   background-size: cover;
-  opacity: 0.5; /* Faded grainy texture */
+  opacity: 0.8; /* Faded grainy texture */
 }
 
 /* Header Navigation */
@@ -51,10 +51,25 @@ nav ul li a:hover {
 
 /* Name Title */
 .name-title {
-  font-size: 25vw; 
+  font-size: 22vw; 
   font-weight: 900;
   text-align: center;
   background: linear-gradient(45deg, #808080, #ff4d4d);
+  background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: gradient-wave 3s ease infinite;
+}
+
+/* Gradient Wave Animation */
+@keyframes gradient-wave {
+  0% {
+    background-position: 200% 0;
+  }
+  50% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
