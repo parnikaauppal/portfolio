@@ -39,4 +39,37 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #fff
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff4d4d; /* Red highlight on hover */
+}
+
+/* Name Title */
+.name-title {
+  font-size: 12vw; /* Large font size for emphasis */
+  font-weight: 900;
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    #ff4d4d,
+    #ffa64d,
+    #ffff4d,
+    #4dff4d,
+    #4d4dff,
+    #ff4dff,
+    #ff4d4d
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: chromatic-shift 4s linear infinite;
+}
+
+/* Chromatic Shift Animation */
+@keyframes chromatic-shift {
+  
