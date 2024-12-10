@@ -51,25 +51,25 @@ nav ul li a:hover {
 
 /* Name Title */
 .name-title {
-  font-size: 18vw; 
+  font-size: 12vw; /* Adjusted font size for a prominent effect */
   font-weight: 900;
   text-align: center;
-  background: linear-gradient(45deg, #808080, #ff4d4d);
-  background-size: 200% 200%;
+  background: linear-gradient(90deg, #ff4d4d, #808080, #4d4dff, #ff4d4d);
+  background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradient-wave 3s ease infinite;
+  animation: text-gradient 6s ease infinite;
 }
 
-/* Gradient Wave Animation */
-@keyframes gradient-wave {
+/* Gradient Animation */
+@keyframes text-gradient {
   0% {
-    background-position: 200% 0;
+    background-position: 0% 50%;
   }
   50% {
-    background-position: -200% 0;
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 200% 0;
+    background-position: 0% 50%;
   }
 }
